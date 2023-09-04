@@ -1,7 +1,7 @@
 FROM pathtoproject/phpcs-drupal:latest
 
-COPY app /app
+COPY app /tmp
 
-RUN chmod +x /app/entrypoint.sh
+RUN chmod +x /tmp/entrypoint.sh
 
-ENTRYPOINT ["/app/entrypoint.sh"]
+ENTRYPOINT ["/tmp/entrypoint.sh"]
